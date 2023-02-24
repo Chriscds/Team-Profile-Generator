@@ -14,12 +14,31 @@ const render = require("./src/page-template.js");
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
 
 // inquirer prompt questions
-inquirer.prompt([{
+inquirer.prompt([
+    {
     // manager questions
         // What is the team manager's name?
+        type: 'input',
+        name: 'name',
+        message: 'What is the team managers name?',
+    },
+    {
             // What is the team manager's ID?
+        type: 'input',
+        name: 'id',
+        message: 'What is the team managers ID?',
+    },
+    {
                 // What is the team manager's email address?
+        type: 'input',
+        name: 'email',
+        message: 'What is the team managers email address?',
+    },
+    {
                     // What is the team manager's office number?
+        type: 'input',
+        name: 'number',
+        message: 'What is the team managers office number?',
 
         // What team member would you like to add? (Choice for employee)
 }]).then(response => {
