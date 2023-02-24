@@ -60,12 +60,31 @@ const NextEmployeePrompt = () => {
 }
 
 const promptForEngineer = () => {
-    inquirer.prompt([{
+    inquirer.prompt([
+        {
         //engineer questions
             // What is your Engineers name?
+            type: 'input',
+            name: 'engineerName', //Check name is good to use
+            message: 'What is your Engineers name?',
+        },
+        {
                 // What is your Engineers ID?
+            type: 'input',
+            name: 'engineerId', //Check name is good to use
+            message: 'What is your Engineers ID?',
+        },
+        {
                     // What is your Engineers email address?
+            type: 'input',
+            name: 'engineeremail', //Check name is good to use
+            message: 'What is your Engineers email address?',
+        },
+        {
                         // What is your Engineers GitHub username?
+            type: 'input',
+            name: 'githubUsername', //Check name is good to use
+            message: 'What is your Engineers GitHub username?',        
          
             // What team member would you like to add? (Choice for employee)
     }]).then(response => {
@@ -76,11 +95,26 @@ const promptForEngineer = () => {
 }
 
 const promptForIntern = () => {
-    inquirer.prompt([{
+    inquirer.prompt([
+        {
         //intern questions
-            // What is your Intern's name?
-                // What is your Intern's ID?
-                    // What is your Intern's email address?
+        // What is your Intern's name?
+        type: 'input',
+            name: 'internName', //Check name is good to use
+            message: 'What is your Interns name?',
+        },
+        {
+            // What is your Intern's ID?
+            type: 'input',
+            name: 'internId', //Check name is good to use
+            message: 'What is your Interns ID?',
+        },
+        {
+                // What is your Intern's email address?
+            type: 'input',
+            name: 'internemail', //Check name is good to use
+            message: 'What is your Interns email address?',
+        
 
             // What team member would you like to add? (Choice for employee)
     }]).then(response => {
