@@ -49,13 +49,25 @@ inquirer.prompt([
 const NextEmployeePrompt = () => {
     inquirer.prompt([{
         // Choice for employee
+        type: 'list',
+        message: 'Would you like to add an employee?',
+        name: 'employee',
+        choices: ['Engineer', 'Intern'],
     }]).then(response => {
         // if engineer
             // promptForEngineer
         // else if intern
             // promptForIntern
         // else
+    const employeeChoice = response.employee;
+        if (employeeChoice === 'Engineer') {
+            promptForEngineer()
+        } else if (employeeChoice === 'Intern') {
+            promptForIntern()
+        } else {
             // use the functionality from page-template to generate the team
+            generateTeam(team); // check if correct
+        }
     })
 }
 
@@ -91,6 +103,7 @@ const promptForEngineer = () => {
         // new Engineer(response)
         // add new engineer to employees array
             // promptForNextEmployee
+            NextEmployeePrompt()
     })
 }
 
@@ -120,6 +133,7 @@ const promptForIntern = () => {
     }]).then(response => {
         // add new intern to employees array
             // promptForNextEmployee
+            NextEmployeePrompt()
     })
 }
 
