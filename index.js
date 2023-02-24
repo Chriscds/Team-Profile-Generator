@@ -16,6 +16,12 @@ const render = require("./src/page-template.js");
 // inquirer prompt questions
 inquirer.prompt([{
     // manager questions
+        // What is the team manager's name?
+            // What is the team manager's ID?
+                // What is the team manager's email address?
+                    // What is the team manager's office number?
+
+        // What team member would you like to add? (Choice for employee)
 }]).then(response => {
     // populate manager information
     // prompt for next employee()
@@ -37,6 +43,12 @@ const NextEmployeePrompt = () => {
 const promptForEngineer = () => {
     inquirer.prompt([{
         //engineer questions
+            // What is your Engineers name?
+                // What is your Engineers ID?
+                    // What is your Engineers email address?
+                        // What is your Engineers GitHub username?
+         
+            // What team member would you like to add? (Choice for employee)
     }]).then(response => {
         // add new engineer to employees array
             // promptForNextEmployee
@@ -46,6 +58,11 @@ const promptForEngineer = () => {
 const promptForIntern = () => {
     inquirer.prompt([{
         //intern questions
+            // What is your Intern's name?
+                // What is your Intern's ID?
+                    // What is your Intern's email address?
+
+            // What team member would you like to add? (Choice for employee)
     }]).then(response => {
         // add new intern to employees array
             // promptForNextEmployee
