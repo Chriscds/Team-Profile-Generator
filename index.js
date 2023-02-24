@@ -50,6 +50,7 @@ const promptForEngineer = () => {
          
             // What team member would you like to add? (Choice for employee)
     }]).then(response => {
+        // new Engineer(response)
         // add new engineer to employees array
             // promptForNextEmployee
     })
