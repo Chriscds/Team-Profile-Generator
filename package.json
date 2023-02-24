@@ -1,27 +1,28 @@
 {
   "name": "team-profile-generator",
   "version": "1.0.0",
-  "description": "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
+  "description": "Generate a HTML file from user inputs for a team profile.",
   "main": "index.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Chriscds/Team-Profile-Generator.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Chris Southon",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Chriscds/Team-Profile-Generator/issues"
   },
   "homepage": "https://github.com/Chriscds/Team-Profile-Generator#readme",
   "dependencies": {
-    "inquirer": "^9.1.4",
+    "inquirer": "^6.5.0"
+  },
+  "devDependencies": {
     "jest": "^29.4.3"
   }
 }
