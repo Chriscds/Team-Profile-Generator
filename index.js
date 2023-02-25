@@ -56,16 +56,15 @@ const NextEmployeePrompt = () => {
         name: 'employee',
         choices: ['Engineer', 'Intern', 'Finished with team input'],
     }]).then(response => {
-        // if engineer
-            // promptForEngineer
-        // else if intern
-            // promptForIntern
-        // else
+        
     const employeeChoice = response.employee;
+    // if engineer = promptForEngineer
         if (employeeChoice === 'Engineer') {
             promptForEngineer()
+    // else if intern = promptForIntern
         } else if (employeeChoice === 'Intern') {
             promptForIntern()
+    // else = generateTeam
         } else {
             // use the functionality from page-template to generate the team
             generateTeam(team); // check if correct
@@ -104,7 +103,8 @@ const promptForEngineer = () => {
     }]).then(response => {
         // new Engineer(response)
         // add new engineer to employees array
-            // promptForNextEmployee
+
+            // prompts for next employees
             NextEmployeePrompt()
     })
 }
@@ -134,7 +134,8 @@ const promptForIntern = () => {
             // What team member would you like to add? (Choice for employee)
     }]).then(response => {
         // add new intern to employees array
-            // promptForNextEmployee
+
+            // prompts for next employees
             NextEmployeePrompt()
     })
 }
