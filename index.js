@@ -43,16 +43,18 @@ inquirer.prompt([
         // What team member would you like to add? (Choice for employee)
 }]).then(response => {
     // populate manager information
-    // prompt for next employee()
+
+    // prompts for next employee
+    NextEmployeePrompt();
 })
 
 const NextEmployeePrompt = () => {
     inquirer.prompt([{
         // Choice for employee
         type: 'list',
-        message: 'Would you like to add an employee?',
+        message: 'Would you like to add another employee?',
         name: 'employee',
-        choices: ['Engineer', 'Intern'],
+        choices: ['Engineer', 'Intern', 'Finished with team input'],
     }]).then(response => {
         // if engineer
             // promptForEngineer
