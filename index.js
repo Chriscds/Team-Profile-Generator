@@ -37,13 +37,16 @@ inquirer.prompt([
     {
                     // What is the team manager's office number?
         type: 'input',
-        name: 'number',
+        name: 'officenumber',
         message: 'What is the team manager\'s office number?',
 
         // What team member would you like to add? (Choice for employee)
 }]).then(response => {
     // populate manager information
-
+    const managerInfo = new Manager(response.name, response.id, response.email, response.officenumber);
+    console.log(managerInfo);
+    // generateManager has an error!!!!!!!!!!
+    // generateManager.push(managerInfo);
     // prompts for next employee
     NextEmployeePrompt();
 })
@@ -102,8 +105,10 @@ const promptForEngineer = () => {
             // What team member would you like to add? (Choice for employee)
     }]).then(response => {
         // new Engineer(response)
+        const engineerInfo = new Engineer (response.engineerName, response.engineerId, response.engineeremail, response.githubUsername);
         // add new engineer to employees array
-
+        console.log(engineerInfo);
+        // generateEngineer.push(engineerInfo);
             // prompts for next employees
             NextEmployeePrompt()
     })
@@ -127,12 +132,21 @@ const promptForIntern = () => {
         {
                 // What is your Intern's email address?
             type: 'input',
-            name: 'internemail', //Check name is good to use
+            name: 'internEmail', //Check name is good to use
             message: 'What is your Intern\'s email address?',
+        },
+        {
+                // What is your Intern's school?
+            type: 'input',
+            name: 'internSchool', //Check name is good to use
+            message: 'What is your Intern\'s School\s name?',
         
 
             // What team member would you like to add? (Choice for employee)
     }]).then(response => {
+        // new intern (response)
+        const internInfo = new Intern (response.internName, response.internId, response.internEmail, response.internSchool);
+        console.log(internInfo);
         // add new intern to employees array
 
             // prompts for next employees
