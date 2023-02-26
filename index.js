@@ -12,6 +12,8 @@ const render = require("./src/page-template.js");
 
 
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
+// store responses
+teamMembersArray = [];
 
 // inquirer prompt questions
 inquirer.prompt([
@@ -48,8 +50,7 @@ inquirer.prompt([
     // push to array
     teamMembersArray.push(managerInfo);
     // generateManager has an error!!!!!!!!!!
-    // generateTeam(managerInfo);
-    // generateManager();
+    
 
     // prompts for next employee
     NextEmployeePrompt();
@@ -74,7 +75,8 @@ const NextEmployeePrompt = () => {
     // else = generateTeam
         } else {
             // use the functionality from page-template to generate the team
-            generateTeam(team); // check if correct
+            // generateTeam(team); // check if correct
+            buildPage();
         }
     })
 }
@@ -161,10 +163,9 @@ const promptForIntern = () => {
     })
 }
 
-// store responses
-teamMembersArray = [];
+
 
 const buildPage = () => {
     // write file
-    // console.log(generateTeam());
+    console.log(teamMembersArray);
 }
