@@ -46,7 +46,8 @@ inquirer.prompt([
     const managerInfo = new Manager(response.name, response.id, response.email, response.officenumber);
     console.log(managerInfo);
     // generateManager has an error!!!!!!!!!!
-    // generateManager.push(managerInfo);
+    generateTeam(managerInfo);
+    // generateManager();
     // prompts for next employee
     NextEmployeePrompt();
 })
@@ -154,6 +155,10 @@ const promptForIntern = () => {
     })
 }
 
+// store responses
+teamMembersArray = [];
+
 const buildPage = () => {
     // write file
+    // console.log(generateTeam());
 }
