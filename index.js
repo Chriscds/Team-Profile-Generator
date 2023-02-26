@@ -8,6 +8,7 @@ const fs = require("fs");
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
+const generateTeam = require("./src/page-template.js");
 const render = require("./src/page-template.js");
 
 
@@ -49,7 +50,7 @@ inquirer.prompt([
     console.log(managerInfo);
     // push to array
     teamMembersArray.push(managerInfo);
-    // generateManager has an error!!!!!!!!!!
+    
     
 
     // prompts for next employee
@@ -75,7 +76,6 @@ const NextEmployeePrompt = () => {
     // else = generateTeam
         } else {
             // use the functionality from page-template to generate the team
-            // generateTeam(team); // check if correct
             buildPage();
         }
     })
@@ -116,9 +116,9 @@ const promptForEngineer = () => {
         teamMembersArray.push(engineerInfo);
         console.log(engineerInfo);
         // generateEngineer.push(engineerInfo);
-
+        
             // prompts for next employees
-            NextEmployeePrompt()
+        NextEmployeePrompt()
     })
 }
 
@@ -157,15 +157,25 @@ const promptForIntern = () => {
         console.log(internInfo);
         // add new intern to employees array
         teamMembersArray.push(internInfo);
+       
             // prompts for next employees
 
-            NextEmployeePrompt()
+        NextEmployeePrompt()
     })
 }
 
-
+function writeTeamFile(){
+    fs.writeFile(OUTPUT_DIR, outputPath, generateTeam(teamMembersArray));
+};
 
 const buildPage = () => {
     // write file
-    console.log(teamMembersArray);
+    // console.log(teamMembersArray);
+    // fs.writeFile(outputPath,"utf-8", generateTeam(teamMembersArray));
+    // fs.writeFile(outputPath, generateTeam(teamMembersArray));
+    // fs.writeFile(file, data, options, callback)
+    writeTeamFile();
+    // generateTeam(teamMembersArray);
+    // console.log(generateTeam(teamMembersArray));
 }
+
