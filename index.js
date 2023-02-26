@@ -86,25 +86,25 @@ const promptForEngineer = () => {
         //engineer questions
             // What is your Engineers name?
             type: 'input',
-            name: 'engineerName', //Check name is good to use
+            name: 'engineerName', 
             message: 'What is your Engineer\'s name?',
         },
         {
                 // What is your Engineers ID?
             type: 'input',
-            name: 'engineerId', //Check name is good to use
+            name: 'engineerId', 
             message: 'What is your Engineer\'s ID?',
         },
         {
                     // What is your Engineers email address?
             type: 'input',
-            name: 'engineeremail', //Check name is good to use
+            name: 'engineeremail', 
             message: 'What is your Engineer\'s email address?',
         },
         {
                         // What is your Engineers GitHub username?
             type: 'input',
-            name: 'githubUsername', //Check name is good to use
+            name: 'githubUsername', 
             message: 'What is your Engineer\'s GitHub username?',        
          
             // What team member would you like to add? (Choice for employee)
@@ -127,25 +127,25 @@ const promptForIntern = () => {
         //intern questions
         // What is your Intern's name?
         type: 'input',
-            name: 'internName', //Check name is good to use
+            name: 'internName', 
             message: 'What is your Intern\'s name?',
         },
         {
             // What is your Intern's ID?
             type: 'input',
-            name: 'internId', //Check name is good to use
+            name: 'internId', 
             message: 'What is your Intern\'s ID?',
         },
         {
                 // What is your Intern's email address?
             type: 'input',
-            name: 'internEmail', //Check name is good to use
+            name: 'internEmail', 
             message: 'What is your Intern\'s email address?',
         },
         {
                 // What is your Intern's school?
             type: 'input',
-            name: 'internSchool', //Check name is good to use
+            name: 'internSchool', 
             message: 'What is your Intern\'s School\s name?',
         
 
