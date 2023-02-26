@@ -45,9 +45,12 @@ inquirer.prompt([
     // populate manager information
     const managerInfo = new Manager(response.name, response.id, response.email, response.officenumber);
     console.log(managerInfo);
+    // push to array
+    teamMembersArray.push(managerInfo);
     // generateManager has an error!!!!!!!!!!
-    generateTeam(managerInfo);
+    // generateTeam(managerInfo);
     // generateManager();
+
     // prompts for next employee
     NextEmployeePrompt();
 })
@@ -108,8 +111,10 @@ const promptForEngineer = () => {
         // new Engineer(response)
         const engineerInfo = new Engineer (response.engineerName, response.engineerId, response.engineeremail, response.githubUsername);
         // add new engineer to employees array
+        teamMembersArray.push(engineerInfo);
         console.log(engineerInfo);
         // generateEngineer.push(engineerInfo);
+
             // prompts for next employees
             NextEmployeePrompt()
     })
@@ -149,8 +154,9 @@ const promptForIntern = () => {
         const internInfo = new Intern (response.internName, response.internId, response.internEmail, response.internSchool);
         console.log(internInfo);
         // add new intern to employees array
-
+        teamMembersArray.push(internInfo);
             // prompts for next employees
+
             NextEmployeePrompt()
     })
 }
