@@ -8,7 +8,6 @@ const fs = require("fs");
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
-const generateTeam = require("./src/page-template.js");
 const render = require("./src/page-template.js");
 
 
@@ -164,18 +163,10 @@ const promptForIntern = () => {
     })
 }
 
-function writeTeamFile(){
-    fs.writeFile(OUTPUT_DIR, outputPath, generateTeam(teamMembersArray));
-};
-
 const buildPage = () => {
-    // write file
+    // writes file to directory output, filename team.html, render generateTeam(teamMembersArray[array])
     // console.log(teamMembersArray);
-    // fs.writeFile(outputPath,"utf-8", generateTeam(teamMembersArray));
-    // fs.writeFile(outputPath, generateTeam(teamMembersArray));
-    // fs.writeFile(file, data, options, callback)
-    writeTeamFile();
-    // generateTeam(teamMembersArray);
-    // console.log(generateTeam(teamMembersArray));
+    fs.writeFileSync(outputPath, render(teamMembersArray));
+    
 }
 
