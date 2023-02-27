@@ -46,7 +46,7 @@ inquirer.prompt([
 }]).then(response => {
     // populate manager information
     const managerInfo = new Manager(response.name, response.id, response.email, response.officenumber);
-    console.log(managerInfo);
+    // console.log(managerInfo);
     // push to array
     teamMembersArray.push(managerInfo);
     
@@ -113,10 +113,9 @@ const promptForEngineer = () => {
         const engineerInfo = new Engineer (response.engineerName, response.engineerId, response.engineeremail, response.githubUsername);
         // add new engineer to employees array
         teamMembersArray.push(engineerInfo);
-        console.log(engineerInfo);
-        // generateEngineer.push(engineerInfo);
+        // console.log(engineerInfo);
         
-            // prompts for next employees
+        // prompts for next employees
         NextEmployeePrompt()
     })
 }
@@ -153,12 +152,11 @@ const promptForIntern = () => {
     }]).then(response => {
         // new intern (response)
         const internInfo = new Intern (response.internName, response.internId, response.internEmail, response.internSchool);
-        console.log(internInfo);
+        // console.log(internInfo);
         // add new intern to employees array
         teamMembersArray.push(internInfo);
        
-            // prompts for next employees
-
+        // prompts for next employees
         NextEmployeePrompt()
     })
 }
@@ -167,6 +165,6 @@ const buildPage = () => {
     // writes file to directory output, filename team.html, render generateTeam(teamMembersArray[array])
     // console.log(teamMembersArray);
     fs.writeFileSync(outputPath, render(teamMembersArray));
-    
+    console.log("Your team member html page has been created successfully!");
 }
 
