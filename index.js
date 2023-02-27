@@ -165,6 +165,6 @@ const buildPage = () => {
     // writes file to directory output, filename team.html, render generateTeam(teamMembersArray[array])
     // console.log(teamMembersArray);
     fs.writeFileSync(outputPath, render(teamMembersArray));
-    console.log("Your team member html page has been created successfully!");
+    console.log("Your team profile html page has been created successfully!");
 }
 
