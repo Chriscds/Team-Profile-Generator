@@ -89,6 +89,10 @@ Run the tests with the following command line:
   <code>npm test</code>
 </pre>
 
+Test screenshot with test output:
+
+![Test-screenshot](__tests__/test-screenshot.png)
+
 ## Questions
 
 Any questions relating to this repository can be opened in an issue, or feel free to contact me 
