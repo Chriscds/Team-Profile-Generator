@@ -44,9 +44,11 @@ Use this application by running the below command line:
 ## Screenshots
 
 Terminal input:
+
 ![Input-screenshot](assets/team-profile-input.png)
 
 HTML output:
+
 ![HTML-output-screenshot](assets/team-profile.png)
 
 ## License
