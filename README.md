@@ -19,6 +19,7 @@ Node.js command-line application. This application will take in information abou
 ## Table of Contents
 - [Installation](#Installation)
 - [Usage](#Usage)
+- [Screenshots](#Screenshots)
 - [License](#License)
 - [Contributing](#Contributing)
 - [Tests](#Tests)
@@ -39,6 +40,14 @@ Use this application by running the below command line:
 <pre>
   <code>node index.js</code>
 </pre>
+
+## Screenshots
+
+Terminal input:
+![Input-screenshot](assets/team-profile-input.png)
+
+HTML output:
+![HTML-output-screenshot](assets/team-profile.png)
 
 ## License
 
@@ -73,6 +82,7 @@ Contribute to the project using the following:
 
 ## Tests
 
+Run the tests with the following command line:
 <pre>
   <code>npm test</code>
 </pre>
